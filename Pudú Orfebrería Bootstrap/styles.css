@@ -1,0 +1,282 @@
+.logo-container img {
+    max-width: 150px;
+}
+
+/* Media query para móviles */
+@media (max-width: 576px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+/* Navbar sticky con transición */
+.navbar {
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: #28a745 !important;
+}
+
+/* Botones personalizados */
+.btn-custom {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #218838;
+}
+
+/* Botones circulares modal */
+.btn-circle {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-circle:hover {
+    background-color: #f1f1f1;
+}
+
+.btn-circle i {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+/* Transición suave para carousel */
+.carousel-item {
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover en tarjetas */
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal general */
+.modal-dialog {
+    max-width: none !important;
+    width: auto !important;
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+    max-height: 90vh;
+}
+
+.modal.fade .modal-dialog {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.modal-content {
+    position: relative;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header del modal */
+.modal-header {
+    position: relative;
+    padding: 0;
+    border-bottom: none;
+    margin-bottom: 1rem;
+}
+
+.modal-title {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.modal-header .btn-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1050;
+    opacity: 1;
+    filter: none;
+    color: #000;
+    font-size: 1.5rem;
+}
+
+.modal-header .btn-close::before {
+    content: "×";
+    display: block;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #000;
+    line-height: 1;
+}
+
+#modalImage {
+    max-width: 100%;
+    max-height: 70vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.modal-body {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.d-flex.align-items-center {
+    width: 100%;
+    gap: 1rem;
+}
+
+.flex-grow-1.text-center {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.modal-content.position-relative {
+    position: relative !important;
+}
+
+.btn-close-white {
+    filter: invert(1) brightness(2);
+    opacity: 1;
+}
+
+/* ---------------------------------------------------
+   Estilos SOLO para formularios dentro de estos contenedores
+   para evitar afectar otros elementos como carrusel, footer, etc
+--------------------------------------------------- */
+
+/* Estilos base para formularios de contacto y cotización */
+.container-contact-form, .cotiza-section {
+    font-family: 'Playfair Display', serif;
+    color: #28a745;
+    background-color: #fff;
+    max-width: 600px;
+    margin: 2rem auto 4rem auto;
+    padding: 2rem 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos centrados dentro de estos formularios */
+.container-contact-form h2, .cotiza-section h2 {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+/* Etiquetas */
+.container-contact-form label, .cotiza-section label {
+    color: #28a745;
+    font-weight: 600;
+}
+
+/* Inputs y textarea con borde redondeado */
+.container-contact-form input.form-control,
+.container-contact-form textarea.form-control,
+.cotiza-section input.form-control,
+.cotiza-section select.form-control,
+.cotiza-section textarea.form-control {
+    border-radius: 50px;
+    border: 2px solid #28a745;
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.container-contact-form input.form-control:focus,
+.container-contact-form textarea.form-control:focus,
+.cotiza-section input.form-control:focus,
+.cotiza-section select.form-control:focus,
+.cotiza-section textarea.form-control:focus {
+    border-color: #1e7e34;
+    box-shadow: none;
+}
+
+.container-contact-form textarea.form-control,
+.cotiza-section textarea.form-control {
+    border-radius: 1rem;
+    resize: vertical;
+}
+
+/* Botones con estilo igual para ambos formularios */
+.btn-contact-submit, .btn-custom {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: block;
+    margin: 1.5rem auto 0 auto;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.btn-contact-submit:hover, .btn-custom:hover {
+    background-color: #1e7e34;
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+    .container-contact-form, .cotiza-section {
+        margin: 1rem 1rem 3rem 1rem;
+        padding: 1.5rem 1.75rem;
+    }
+
+    .btn-contact-submit, .btn-custom {
+        width: 100%;
+    }
+}
